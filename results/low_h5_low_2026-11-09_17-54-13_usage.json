@@ -1,0 +1,27 @@
+{
+  "model": "gpt-6-luna",
+  "seeds": [
+    0
+  ],
+  "usage": {
+    "prompt_tokens": 454531,
+    "cached_tokens": 430471,
+    "completion_tokens": 22351,
+    "reasoning_tokens": 14549,
+    "calls": 38,
+    "retries": 0,
+    "cache_hit_rate": 0.9470663167088713
+  },
+  "elm_costs_before": {
+    "usage": 2.50656,
+    "limit": 500.0,
+    "currency": "GBP",
+    "asOf": "2026-11-09T00:00:00Z"
+  },
+  "elm_costs_after": {
+    "usage": 2.50656,
+    "limit": 500.0,
+    "currency": "GBP",
+    "asOf": "2026-11-09T00:00:00Z"
+  }
+}

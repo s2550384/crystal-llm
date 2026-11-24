@@ -1,0 +1,50 @@
+119 participants, 3964 combines; target not on reconstructed board: 0, held missing: 0
+mean candidate targets per choice: 13.9
+spaces built in 34s
+  G1 feature-Boolean               unique=  15487 top-6000 mass=0.905 contains true rule: {'high': False, 'medium': False, 'low': False}
+  G2 Zhao-Arumugam (uniform)       unique=   7124 top-6000 mass=0.994 contains true rule: {'high': True, 'medium': False, 'low': False}
+  G3 relational DNF                unique=  40070 top-6000 mass=0.818 contains true rule: {'high': True, 'medium': False, 'low': False}
+  G3 relational DNF, no colour     unique=  24327 top-6000 mass=0.902 contains true rule: {'high': True, 'medium': False, 'low': False}
+  G3 fitted theta [high]           unique=   9919 top-6000 mass=0.980 contains true rule: {'high': True, 'medium': True, 'low': False}
+  G3 fitted theta [medium]         unique=   6097 top-6000 mass=1.000 contains true rule: {'high': True, 'medium': False, 'low': False}
+  G3 fitted theta [low]            unique=   7389 top-6000 mass=0.993 contains true rule: {'high': True, 'medium': True, 'low': False}
+  G2 fitted theta [high]           unique=  30922 top-6000 mass=0.875 contains true rule: {'high': True, 'medium': False, 'low': False}
+  G2 fitted theta [medium]         unique=  15556 top-6000 mass=0.952 contains true rule: {'high': True, 'medium': False, 'low': False}
+  G2 fitted theta [low]            unique=  18446 top-6000 mass=0.938 contains true rule: {'high': True, 'medium': False, 'low': False}
+G1 feature-Boolean               LL=-10315.7  eps=0.001, beta=0.53  (57s)
+G2 Zhao-Arumugam (uniform)       LL=-10060.2  eps=0.3, beta=1.63  (79s)
+G3 relational DNF                LL=-10047.3  eps=0.2, beta=1.70  (100s)
+G3 relational DNF, no colour     LL=-10052.2  eps=0.3, beta=1.96  (122s)
+
+choices=3964
+                                  model       LL     BIC               params  mean_p_choice  LL_high  LL_medium  LL_low
+ G2 Zhao-Arumugam (theta from messages)  -9992.5 20001.5   eps=0.3, beta=1.93         0.0804  -2946.7    -3686.9 -3358.8
+G3 relational DNF (theta from messages) -10025.5 20067.6   eps=0.3, beta=2.07         0.0797  -3000.1    -3664.3 -3361.2
+                      G3 relational DNF -10047.3 20111.2   eps=0.2, beta=1.70         0.0793  -2997.8    -3696.2 -3353.4
+           G3 relational DNF, no colour -10052.2 20121.1   eps=0.3, beta=1.96         0.0792  -2996.3    -3692.9 -3363.1
+             G2 Zhao-Arumugam (uniform) -10060.2 20136.9   eps=0.3, beta=1.63         0.0790  -2977.2    -3718.7 -3364.3
+               Oracle (knows true rule) -10156.7 20321.7            beta=0.73         0.0771  -3089.5    -3721.7 -3345.6
+                    Pairwise (no rules) -10305.2 20626.9   p0=0.05, beta=2.18         0.0743  -3257.2    -3710.8 -3337.1
+                     G1 feature-Boolean -10315.7 20648.0 eps=0.001, beta=0.53         0.0741  -3261.4    -3708.6 -3345.7
+                                 Random -10341.8 20683.6                    -         0.0736  -3288.5    -3717.5 -3335.8
+
+best-fitting grammar per participant: {'G2 Zhao-Arumugam (uniform)': 13, 'G1 feature-Boolean': 31, 'G2 Zhao-Arumugam (theta from messages)': 35, 'G3 relational DNF (theta from messages)': 26, 'G3 relational DNF, no colour': 3, 'G3 relational DNF': 11}
+{'high|G1 feature-Boolean': 13, 'high|G2 Zhao-Arumugam (theta from messages)': 16, 'high|G2 Zhao-Arumugam (uniform)': 2, 'high|G3 relational DNF': 3, 'high|G3 relational DNF (theta from messages)': 4, 'high|G3 relational DNF, no colour': 1, 'low|G1 feature-Boolean': 11, 'low|G2 Zhao-Arumugam (theta from messages)': 9, 'low|G2 Zhao-Arumugam (uniform)': 6, 'low|G3 relational DNF': 4, 'low|G3 relational DNF (theta from messages)': 7, 'low|G3 relational DNF, no colour': 1, 'medium|G1 feature-Boolean': 7, 'medium|G2 Zhao-Arumugam (theta from messages)': 10, 'medium|G2 Zhao-Arumugam (uniform)': 5, 'medium|G3 relational DNF': 4, 'medium|G3 relational DNF (theta from messages)': 15, 'medium|G3 relational DNF, no colour': 1}
+
+LL difference vs G2 Zhao-Arumugam (uniform) (positive = better), 95% bootstrap CI over participants:
+  Random                                     -282.8  [ -459.6,  -117.9]
+  G1 feature-Boolean                         -256.4  [ -419.7,  -105.6]
+  G3 relational DNF                            13.2  [  -34.0,    56.7]
+  G3 relational DNF, no colour                  8.4  [  -29.1,    44.9]
+  G2 Zhao-Arumugam (theta from messages)       67.8  [   39.2,    96.1]
+  G3 relational DNF (theta from messages)      35.2  [  -20.4,    94.1]
+  Pairwise (no rules)                        -245.8  [ -405.2,   -99.5]
+  Oracle (knows true rule)                    -96.8  [ -187.1,   -11.7]
+
+theta estimated from messages (held-out condition -> theta):
+  high {'S_A': 0.525, 'S_B': 0.125, 'S_AB': 0.35, 'A_same': 0.113, 'A_diff': 0.321, 'A_C': 0.566, 'C_or': 0.389, 'C_o1': 0.014, 'C_o2': 0.014, 'C_both': 0.007, 'C_pair': 0.576}
+  medium {'S_A': 0.717, 'S_B': 0.065, 'S_AB': 0.217, 'A_same': 0.564, 'A_diff': 0.127, 'A_C': 0.309, 'C_or': 0.4, 'C_o1': 0.021, 'C_o2': 0.021, 'C_both': 0.011, 'C_pair': 0.547}
+  low {'S_A': 0.647, 'S_B': 0.098, 'S_AB': 0.255, 'A_same': 0.444, 'A_diff': 0.206, 'A_C': 0.349, 'C_or': 0.398, 'C_o1': 0.008, 'C_o2': 0.008, 'C_both': 0.008, 'C_pair': 0.576}
+ G3 high {'p_or': 0.243, 'p_and': 0.371, 'sameShape': 0.042, 'diffShape': 0.095, 'sameTex': 0.084, 'diffTex': 0.168, 'isShape': 0.053, 'isTex': 0.095, 'pairShape': 0.432, 'pairTex': 0.032}
+ G3 medium {'p_or': 0.208, 'p_and': 0.315, 'sameShape': 0.368, 'diffShape': 0.053, 'sameTex': 0.126, 'diffTex': 0.063, 'isShape': 0.021, 'isTex': 0.105, 'pairShape': 0.211, 'pairTex': 0.053}
+ G3 low {'p_or': 0.205, 'p_and': 0.365, 'sameShape': 0.327, 'diffShape': 0.045, 'sameTex': 0.064, 'diffTex': 0.155, 'isShape': 0.055, 'isTex': 0.091, 'pairShape': 0.2, 'pairTex': 0.064}
